@@ -13,13 +13,13 @@ As part of the #90DaysOfDevOps journey, I’ve completed **Week 5**, which was a
 
 ---
 
-## 🔍 Task 1: Introduction & Conceptual Understanding
+## Task 1: Introduction & Conceptual Understanding
 
-### 🌐 What is Docker?
+### What is Docker?
 
 Docker is a platform that enables developers to package applications into containers—lightweight, portable, and consistent units of software that include everything needed to run: code, runtime, system tools, libraries, and settings.
 
-### 🧱 Virtualization vs. Containerization
+### Virtualization vs. Containerization
 
 | Virtualization | Containerization |
 | --- | --- |
@@ -32,19 +32,19 @@ Containers are perfect for building, shipping, and running apps reliably across 
 
 ---
 
-## 🧰 Task 2: Docker file for a Sample App
+## Task 2: Docker file for a Sample App
 
-### 🧪 My Sample App: Python Flask Web Server : Picked up a GitHub sample repo and cloned in the ec2
+### My Sample App: Python Flask Web Server : Picked up a GitHub sample repo and cloned in the ec2
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1751512623465/f8e02e16-3acd-4ad0-9a36-9dd0f271fa8d.png align="center")
 
-### 📝 Dockerfile
+### Dockerfile
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1751513213290/8e7c3dad-b2b3-49f5-8a5f-3f621dbeb9be.png align="center")
 
 Note: Correction the line 7 should be COPY . .
 
-### 🔧 Build & Run
+### Build & Run
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1751513749978/0b04f976-472f-4590-a70d-05907aaafe2b.png align="center")
 
@@ -54,37 +54,37 @@ build command:docker build -t laxmi/sample-app:latest .
 
 ---
 
-### 🧩Task -3
+### Task -3
 
 ### Key Terms – The Building Blocks of Docker
 
-* **📸 Image**: This is like a mold or template. It defines what your application and its environment should look like. Once created, it can be replicated anywhere—your laptop, a cloud server, or a CI/CD pipeline.
+* **Image**: This is like a mold or template. It defines what your application and its environment should look like. Once created, it can be replicated anywhere—your laptop, a cloud server, or a CI/CD pipeline.
     
-* **📦 Container**: A running instance of the image. You can think of it as a package that’s been assembled and is now active—just like a product ready to be delivered.
+* **Container**: A running instance of the image. You can think of it as a package that’s been assembled and is now active—just like a product ready to be delivered.
     
-* **📄 Docker file**: This is your instruction manual. It tells Docker exactly how to build your image: which base system to use, what dependencies to install, and how to run your app.
+* **Docker file**: This is your instruction manual. It tells Docker exactly how to build your image: which base system to use, what dependencies to install, and how to run your app.
     
-* **💾 Volume**: External storage that stays intact even if the container is removed or restarted. It’s like storing project data in a shared folder outside the machine—safe and reusable.
+* **Volume**: External storage that stays intact even if the container is removed or restarted. It’s like storing project data in a shared folder outside the machine—safe and reusable.
     
-* **🌐 Network**: Allows containers to communicate with each other securely and efficiently. In microservice architectures, this is critical—just like how different departments in a factory coordinate during production.
-    
-
----
-
-### ⚙️ Docker Components – The Core System
-
-* **⚙️ Docker Engine**: The runtime that does all the heavy lifting. It manages images, containers, and the underlying system resources needed to keep them running smoothly.
-    
-* **🧑‍💻 Docker CLI**: Your command-line tool to interact with Docker. Whether you're building images, running containers, or checking logs—this is your control panel.
-    
-* **☁️ Docker Hub**: A cloud-based registry where you can publish your images for others to use or pull existing images created by the community. Think of it as GitHub, but for container images.
+* **Network**: Allows containers to communicate with each other securely and efficiently. In microservice architectures, this is critical—just like how different departments in a factory coordinate during production.
     
 
 ---
 
-## 🏗️ Task 4: Multi-Stage Build Optimization
+### Docker Components – The Core System
 
-### 🧪 Modified Dockerfile
+* **Docker Engine**: The runtime that does all the heavy lifting. It manages images, containers, and the underlying system resources needed to keep them running smoothly.
+    
+* **Docker CLI**: Your command-line tool to interact with Docker. Whether you're building images, running containers, or checking logs—this is your control panel.
+    
+* **Docker Hub**: A cloud-based registry where you can publish your images for others to use or pull existing images created by the community. Think of it as GitHub, but for container images.
+    
+
+---
+
+## Task 4: Multi-Stage Build Optimization
+
+### Modified Dockerfile
 
 ```plaintext
  Builder stage
@@ -103,7 +103,7 @@ EXPOSE 80
 CMD ["python", "app.py"]
 ```
 
-### 📏 Size Comparison
+### Size Comparison
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1751514753051/6ce457dc-1b0a-4286-8212-7b48276aa160.png align="center")
 
@@ -114,11 +114,11 @@ CMD ["python", "app.py"]
 | Initial Build | ~137 MB |
 | Multi-Stage | ~63 MB |
 
-**✅ Insight:** Multi-stage builds reduce bloat and remove unnecessary build-time dependencies.
+**Insight:** Multi-stage builds reduce bloat and remove unnecessary build-time dependencies.
 
 ---
 
-## 📦 Task 5: Docker Hub Integration
+## Task 5: Docker Hub Integration
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1751515337096/2ba83e63-61a8-4c07-8072-b7007efaee9e.png align="center")
 
@@ -130,7 +130,7 @@ CMD ["python", "app.py"]
 
 ---
 
-## 💾 Task 6: Docker Volumes
+## Task 6: Docker Volumes
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1751891600355/4ffaf960-62da-4948-abcf-268eac32781c.png align="center")
 
@@ -151,7 +151,7 @@ They allow you to persist data across container restarts, making them ideal for 
 
 ---
 
-## 🌐 Task 7: Docker Networking performed for a two-tier flask application
+## Task 7: Docker Networking performed for a two-tier flask application
 
 ```plaintext
 bashCopyEditdocker network create my_network
@@ -172,9 +172,9 @@ Connected mysql and a flask container to the created network .
 
 ---
 
-## 🧩 Task 8: Docker Compose
+## Task 8: Docker Compose
 
-### 📄 docker-compose.yml
+### docker-compose.yml
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1751906073063/fb61321a-7a7f-436f-bf82-e22927c01098.png align="center")
 
@@ -201,13 +201,13 @@ Connected mysql and a flask container to the created network .
 
 ---
 
-## 🛡️ Task 9: Docker Scout Vulnerability Analysis
+## Task 9: Docker Scout Vulnerability Analysis
 
 ```plaintext
  scout cves laxmi/sample-app:v1.0 > scout_report.txt
 ```
 
-### 🔍 Findings Summary:
+### Findings Summary:
 
 * **CVEs Found**: 3 (1 High, 1 Medium, 1 Low)
     
@@ -221,16 +221,16 @@ Docker Scout (or tools like Trivy) give visibility into your image's security po
 
 ---
 
-## 📝 Task 10: Reflection
+## Task 10: Reflection
 
-### 📘 Commands Recap
+### Commands Recap
 
 * `docker build`, `docker run`, `docker volume`, `docker network`, `docker-compose`
     
 * `docker scout`, `docker push`, `docker pull`
     
 
-### 💡 Final Thoughts
+### Final Thoughts
 
 Docker has revolutionized software development by enabling fast, consistent, and scalable deployments. Its lightweight architecture makes it perfect for microservices, and features like Compose and multi-stage builds make DevOps workflows smoother. But remember: with great power comes great responsibility—secure your images!
 
