@@ -1,7 +1,7 @@
 ---
-title: "Week 4: Git & GitHub Advanced Challenge – A Deep Dive into Real-World Version Control 🔧"
-seoTitle: "Git & GitHub Advanced Challenge – A Deep Dive into Real-World Version "
-seoDescription: "Git & GitHub Advanced Challenge – A Deep Dive into Real-World Version Control "
+title: "Week 4: Git & GitHub Advanced Challenge : A Deep Dive into Real-World Version Control"
+seoTitle: "Git & GitHub Advanced Challenge – A Deep Dive into Real-World Version"
+seoDescription: "Git & GitHub Advanced Challenge – A Deep Dive into Real-World Version Control"
 datePublished: Mon Jul 07 2025 10:13:42 GMT+0000 (Coordinated Universal Time)
 cuid: cmcsy1ddk000i02l83zu3dfau
 slug: week-4-git-and-github-advanced-challenge-a-deep-dive-into-real-world-version-control
@@ -12,7 +12,7 @@ slug: week-4-git-and-github-advanced-challenge-a-deep-dive-into-real-world-versi
 
 ---
 
-## 🚀 Introduction
+## Introduction
 
 This week’s challenge focused on **advanced Git concepts** essential for any DevOps professional. Whether working solo or in a team, mastering Git’s powerful features like **pull requests, stashing, resetting, and branching strategies** helps keep workflows efficient and collaborative.
 
@@ -20,19 +20,19 @@ Here’s what I worked on in Week 4, and how it deepened my understanding of Git
 
 ---
 
-## 🧩 Task 1: Pull Requests – Collaborating Like a Pro
+## Task 1: Pull Requests – Collaborating Like a Pro
 
 ### Scenario
 
 Created a new feature, committed it to a branch, and opened a **Pull Request (PR)** to merge into the main branch.
 
-### 🔧 Steps I Followed:
+### Steps I Followed:
 
-✅ Created PR on GitHub, requested a review, and merged after approval.
+Created PR on GitHub, requested a review, and merged after approval.
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1751881491575/0bfaf8ad-30d0-4771-bfa9-ee7ca6514cdf.png align="center")
 
-### 💡 Key Takeaways:
+### Key Takeaways:
 
 * Always write clear PR descriptions.
     
@@ -43,13 +43,13 @@ Created a new feature, committed it to a branch, and opened a **Pull Request (PR
 
 ---
 
-## 🔁 Task 2: Undoing Changes – Reset & Revert
+## Task 2: Undoing Changes – Reset & Revert
 
 ### Scenario
 
 Accidentally committed the wrong code and needed to undo it using different Git reset modes.
 
-### 🔧 Commands Used:
+### Commands Used:
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1751881757937/b3e95972-bff6-4509-b5cc-24f08157f6b0.png align="center")
 
@@ -64,7 +64,7 @@ git reset --hard HEAD~1     # Discards everything
 git revert HEAD             # Safely creates a new commit that undoes the previous one
 ```
 
-### 🧠 Learning:
+### Learning:
 
 * Use **revert** in public branches to avoid rewriting history.
     
@@ -73,13 +73,13 @@ git revert HEAD             # Safely creates a new commit that undoes the previo
 
 ---
 
-## 🗂️ Task 3: Stashing – Saving Work Temporarily
+## Task 3: Stashing – Saving Work Temporarily
 
 ### Scenario
 
 Needed to switch branches but didn’t want to commit incomplete changes.
 
-### 🔧 Commands Used:
+### Commands Used:
 
 ```plaintext
 bashCopyEditgit stash
@@ -87,7 +87,7 @@ git checkout main
 git stash pop  # Also explored git stash apply
 ```
 
-### 💬 Notes:
+### Notes:
 
 * `git stash pop` removes the stash after applying.
     
@@ -100,20 +100,20 @@ git stash pop  # Also explored git stash apply
 
 ---
 
-## 🍒 Task 4: Cherry-Picking – Applying Specific Commits
+## Task 4: Cherry-Picking – Applying Specific Commits
 
 ### Scenario
 
 Needed a bug fix from another branch without merging all its changes.
 
-### 🔧 Commands Used:
+### Commands Used:
 
 ```plaintext
 git log --oneline
 git cherry-pick <commit-hash>
 ```
 
-✅ Resolved conflicts and used `git cherry-pick --continue` to finish.
+Resolved conflicts and used `git cherry-pick --continue` to finish.
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1751882359451/512f4f87-142f-46b2-890b-64fb9dbcaa13.png align="center")
 
@@ -123,9 +123,9 @@ Conflict resolved manully
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1751883045092/69a149d8-5b78-41d0-923f-1d42d4f862b8.png align="center")
 
-:  
+:
 
-### ⚠️ Risks:
+### Risks:
 
 * Cherry-picking can introduce **duplicate commits**.
     
@@ -134,13 +134,13 @@ Conflict resolved manully
 
 ---
 
-## 🔀 Task 5: Rebasing – Keeping a Clean History
+## Task 5: Rebasing – Keeping a Clean History
 
 ### Scenario
 
 My branch was behind `main` and needed updates without merge commits.
 
-### 🔧 Commands Used:
+### Commands Used:
 
 ```plaintext
 git fetch origin main
@@ -148,14 +148,14 @@ git rebase origin/main
 git rebase --continue
 ```
 
-### 🔍 Key Difference:
+### Key Difference:
 
 * `merge` keeps all commits but adds a merge commit.
     
 * `rebase` rewrites history to make it linear and clean.
     
 
-### ✅ Best Practices:
+### Best Practices:
 
 * Only rebase local changes.
     
@@ -166,7 +166,7 @@ git rebase --continue
 
 ---
 
-## 🌳 Task 6: Industry Branching Strategies
+## Task 6: Industry Branching Strategies
 
 I explored and simulated these workflows using Git branches:
 
@@ -177,7 +177,7 @@ I explored and simulated these workflows using Git branches:
 3. **Trunk-Based Development** – CI/CD + short-lived feature branches
     
 
-### 📌 Which One’s Best?
+### Which One’s Best?
 
 | Strategy | Pros | Cons |
 | --- | --- | --- |
@@ -189,14 +189,14 @@ I explored and simulated these workflows using Git branches:
 
 ---
 
-## 📸 Bonus: Screenshot from My Solution
+## Bonus: Screenshot from My Solution
 
 > “Used `git reset --soft HEAD~1` to undo a commit while keeping changes staged. Super handy during experimentation!”  
 > “Rebased my feature branch with `origin/main` to maintain a linear commit history. Less clutter, more clarity!”
 
 ---
 
-## 🙌 Conclusion
+## Conclusion
 
 This week gave me practical, hands-on exposure to Git’s advanced capabilities. I now feel more confident contributing to collaborative projects and managing real-world version control challenges.
 
